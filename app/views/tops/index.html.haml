@@ -1,12 +1,16 @@
-=link_to new_user_registration_path do
- 新規登録
+-if user_signed_in?
 
- %br
+  =link_to "ログアウト", destroy_user_session_path, method: :delete
+    
 
-=link_to destroy_user_session_path do
- ログアウト
+  
+- else
+  =link_to "新規登録", new_user_registration_path 
+    
 
- %br
 
-=link_to new_user_session_path do
- ログイン
+
+  =link_to "ログイン", new_user_session_path 
+    
+ 
+
