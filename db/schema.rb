@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<
 ActiveRecord::Schema.define(version: 2020_03_11_031925) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "ancestry"
+=======
+ActiveRecord::Schema.define(version: 2020_03_11_031935) do
+
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -57,4 +62,16 @@ ActiveRecord::Schema.define(version: 2020_03_11_031925) do
   add_foreign_key "comments", "users"
   add_foreign_key "reports", "categories"
   add_foreign_key "reports", "users"
+  
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  
+
 end
