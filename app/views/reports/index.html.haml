@@ -1,0 +1,6 @@
+.search 
+ -@report.each do |report|
+  .search__box
+   = link_to "/reports/#{report.id}", method: :get do
+    .search__box__1
+     = report.title
