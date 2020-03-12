@@ -35,3 +35,4 @@ web_2 = web.children.create(:name=>"ビジネス・経済")
 web_3 = web.children.create(:name=>"教育")
 web_4 = web.children.create(:name=>"自己啓発")
 web_5 = web.children.create(:name=>"その他")
+

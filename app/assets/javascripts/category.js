@@ -5,7 +5,6 @@ $(function(){
     return html;
   };
   $(".exhibition__detail__cat").on("change", ".aaaaa", function(){
-    console.log("ok1")
     var category_id = $(this).val()
     $(this).nextAll().remove()
     // .nextAll()で次以降全てという意味
