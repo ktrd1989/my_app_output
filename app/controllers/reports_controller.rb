@@ -3,6 +3,9 @@ class ReportsController < ApplicationController
     @report = Report.new
   end
 
+  def show
+  end
+
   def create
     Report.create(report_params) 
     redirect_to root_path
