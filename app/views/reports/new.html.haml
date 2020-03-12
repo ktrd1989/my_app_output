@@ -1,22 +1,23 @@
 %h1 投稿
-= form_with scope: :report,url: reports_path, local: true do |form|
+= form_for @report do |f|
   %p
-    = form.label :タイトル
+    = f.label :タイトル
     %br/
-    = form.text_field :title
+    = f.text_field :title
 
   %p
-    = form.label :カテゴリー
+    = f.label :カテゴリー, class:""
     %br/
-    = form.text_field :category
+    .exhibition__detail__cat
+      = f.collection_select :category_id, Category.roots, :id, :name, {prompt: "------"}, {class: "aaaaa"}
 
   %p
-    = form.label :画像
+    = f.label :画像
     %br/
-    = form.file_field :image
+    = f.file_field :image
   %p
-    = form.label :レビュー
+    = f.label :レビュー
     %br/
-    = form.text_area :review
+    = f.text_area :review
   %p
-    = form.submit
+    = f.submit
