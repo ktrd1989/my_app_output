@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   resources :reports do
   end
+  namespace :api do
+    resources :categorys, only: :index, defaults: { format: 'json' }
+  end
+
   
   root "tops#index"
 
