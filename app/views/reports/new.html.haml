@@ -6,15 +6,15 @@
     = f.text_field :title
 
   %p
-    = f.label :カテゴリー, class:""
+    = f.label :カテゴリー
     %br/
     .exhibition__detail__cat
       = f.collection_select :category_id, Category.roots, :id, :name, {prompt: "------"}, {class: "aaaaa"}
 
   %p
-    = f.label :画像
+    = f.label :ウェブサイト
     %br/
-    = f.file_field :image
+    = f.text_field :url
   %p
     = f.label :レビュー
     %br/

@@ -4,12 +4,12 @@ class ReportsController < ApplicationController
   end
 
   def create
-    Report.create(report_params)
+    Report.create(report_params) 
     redirect_to root_path
   end
 
   private
     def  report_params
-      params.require(:report).permit(:title, :review, :image)
+      params.require(:report).permit(:title, :review, :url,:category_id).merge(user_id: current_user.id)
     end
 end
