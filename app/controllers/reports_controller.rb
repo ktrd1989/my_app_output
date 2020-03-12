@@ -1,4 +1,8 @@
 class ReportsController < ApplicationController
+  def index
+    @report = Report.all.order(updated_at: :desc)
+  end
+  
   def new
     @report = Report.new
   end
