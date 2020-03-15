@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   end
   
   resources :reports do
+    #コメント情報を作る機能
+    resources :comments, only: :create
   end
 
   namespace :api do
