@@ -1,1 +1,20 @@
-Hello
+%h1 タイトル
+= @report.title
+
+%h1 カテゴリー
+= @report.category.name
+
+%h1 URL
+= @report.url
+%h1 レビュー
+= @report.review
+
+.comment
+  <コメント一覧>
+  .comment__inner
+    /itemに紐づくコメントをコメントテーブルから取り出す
+    - @comments.each do |comment|
+      .comment__inner__box
+        = link_to comment.user.name,user_path,class: "comment__inner__box__name"
+        .comment__inner__box__text
+          = comment.text
