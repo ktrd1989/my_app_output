@@ -9,12 +9,18 @@
 %h1 レビュー
 = @report.review
 
+.message-content
+  /form_withでcomment#createに飛ばす
+  = form_with(model: [@report,@comment], local: true, class: "message-content__form") do |form|
+    = form.text_area :text, type: "text", class: "message-content__form--textarea"
+    %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+    = form.submit "コメントする" ,type: "submit", class: "message-content__form--submit"
 .comment
   <コメント一覧>
   .comment__inner
     /itemに紐づくコメントをコメントテーブルから取り出す
     - @comments.each do |comment|
       .comment__inner__box
-        = link_to comment.user.name,user_path,class: "comment__inner__box__name"
+        = link_to comment.user.name,root_path,class: "comment__inner__box__name"
         .comment__inner__box__text
           = comment.text

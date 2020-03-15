@@ -9,11 +9,17 @@ class ReportsController < ApplicationController
 
   def show
     @report = Report.find(params[:id])
+    @comment = Comment.new
+    @comments = @report.comments.includes(:user)
   end
 
   def create
     Report.create(report_params) 
     redirect_to root_path
+  end
+
+  def update
+    @report = Report.find(params[:id])
   end
 
   private
