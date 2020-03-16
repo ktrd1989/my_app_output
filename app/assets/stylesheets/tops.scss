@@ -18,6 +18,10 @@
     font-size: 120%;
     margin-left: 50px;
     margin-top: 15px;
+    h1{
+      font-family: 'Liu Jian Mao Cao', cursive;
+      font-size: 25px;
+    }
   }
   a{
     color: white;
@@ -34,6 +38,10 @@
     }
     
   }
+}
+.main{
+  background: #ebeae9;
+  height: 100%;
 }
   h2 {
     text-orientation:sideways;
