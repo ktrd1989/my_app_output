@@ -22,6 +22,9 @@ class ReportsController < ApplicationController
     @report = Report.find(params[:id])
   end
 
+  def search
+  end
+
   private
     def  report_params
       params.require(:report).permit(:title, :review, :url,:category_id).merge(user_id: current_user.id)
