@@ -1,35 +1,18 @@
-.header
- .header__letter
-  %h1 book,movie,web and so on
+.main
+  .main__search
+  = link_to search_reports_path do
+    = image_tag 'icons8-ios-50.png'
+  %br  
 
- .header__log
-  -if user_signed_in?
-   .header__log__left
-   =link_to "Log Out", destroy_user_session_path, method: :delete
-   .header__log__right
-   =link_to "edit", edit_user_registration_path
-      
-  - else
-   .header__log__left
-   =link_to "Sign-Up", new_user_registration_path 
-    
-   .header__log__right
-   =link_to "Log In", new_user_session_path
+  .main__nav
+    .main__nav__gray
+    %ul#slidemenu
+      %li
+      =link_to "投稿", new_report_path
+      %li
+      =link_to "投稿一覧表示", reports_path
 
-.search
-= link_to search_reports_path do
- = image_tag 'icons8-ios-50.png'
-%br  
-
-.nav
- .nav__gray
- %ul#slidemenu
-  %li
-  =link_to "投稿", new_report_path
-  %li
-  =link_to "投稿一覧表示", reports_path
-
-%h2 BOOK-WORM
+  %h2 BOOK-WORM
 
 
     
