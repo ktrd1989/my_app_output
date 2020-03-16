@@ -16,7 +16,7 @@
   justify-content: space-between;
   &__letter{
     font-size: 120%;
-    margin-left: 220px;
+    margin-left: 50px;
     margin-top: 15px;
   }
   a{
@@ -39,3 +39,33 @@
     text-orientation:sideways;
     writing-mode:vertical-rl;
   }
+
+
+.footer{
+  background-color: black;
+  color: white;
+  height: 160px;
+  font-size: 20px;
+  text-align: center;
+  a{
+    color: white;
+    font-size: 16px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+  }
+  &__contents{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    
+    &__content1{
+      margin-left: 300px;
+    }
+    &__content2{
+      margin-right: 300px;
+    }
+
+  }
+  h3{
+    font-family: 'Pacifico', cursive;
+  }
+}

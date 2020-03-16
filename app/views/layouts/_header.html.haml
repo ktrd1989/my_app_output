@@ -1,17 +1,17 @@
-.header1
- .header1__letter
+.header
+ .header__letter
   %h1 book,movie,web and so on
 
- .header1__log
+ .header__log
   -if user_signed_in?
-   .header1__log__left
+   .header__log__left
    =link_to "Log Out", destroy_user_session_path, method: :delete
-   .header1__log__right
+   .header__log__right
    =link_to "edit", edit_user_registration_path
       
   - else
-   .header1__log__left
+   .header__log__left
    =link_to "Sign-Up", new_user_registration_path 
     
-   .header1__log__right
+   .header__log__right
    =link_to "Log In", new_user_session_path
