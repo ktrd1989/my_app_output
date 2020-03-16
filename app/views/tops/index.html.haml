@@ -1,34 +1,35 @@
-.header__box__1__search-box
-  = form_with(url: reports_searches_path, local: true, method: :get, class: "header__box__1__search-box__box") do |f|
-    = f.text_field :keyword, placeholder: "キーワードから探す", class: "header__box__1__search-box__box__text"
-    = f.submit "検索",class: "search-btn"
+.header
+ .header__letter
+  %h1 book,movie,web and so on
 
-
--if user_signed_in?
-
-  =link_to "ログアウト", destroy_user_session_path, method: :delete
+ .header__log
+  -if user_signed_in?
+   .header__log__left
+   =link_to "Log Out", destroy_user_session_path, method: :delete
+   .header__log__right
+   =link_to "edit", edit_user_registration_path
+      
+  - else
+   .header__log__left
+   =link_to "Sign-Up", new_user_registration_path 
     
+   .header__log__right
+   =link_to "Log In", new_user_session_path
 
-  
-- else
-  =link_to "新規登録", new_user_registration_path 
-    
-
-  %br
-
-  =link_to "ログイン", new_user_session_path 
-
+.search
+= link_to search_reports_path do
+ = image_tag 'icons8-ios-50.png'
 %br  
 
-=link_to "編集", edit_user_registration_path
+.nav
+ .nav__gray
+ %ul#slidemenu
+  %li
+  =link_to "投稿", new_report_path
+  %li
+  =link_to "投稿一覧表示", reports_path
 
-%br
-
-=link_to "投稿", new_report_path
-
-%br
-
-=link_to "投稿一覧表示", reports_path
+%h2 BOOK-WORM
 
 
     

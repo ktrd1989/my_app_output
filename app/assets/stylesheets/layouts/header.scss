@@ -1,14 +1,4 @@
-// Place all the styles related to the tops controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-*{
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-}
-
-.header{
+.header1{
   height: 60px;
   background-color: black;
   color: white;
@@ -16,7 +6,7 @@
   justify-content: space-between;
   &__letter{
     font-size: 120%;
-    margin-left: 220px;
+    margin-left: 50px;
     margin-top: 15px;
   }
   a{
@@ -35,7 +25,3 @@
     
   }
 }
-  h2 {
-    text-orientation:sideways;
-    writing-mode:vertical-rl;
-  }

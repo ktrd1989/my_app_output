@@ -1,0 +1,29 @@
+.search-box{
+  margin-top: 400px;
+  &__box{
+    margin-left: 500px;
+    display: flex;
+    &__text{
+      height: 51px;
+      width: 575px;
+      background-color: black;
+      color: white;
+      font-size: 1.625em;
+      padding: 0 20px;
+    }
+    &__btn{
+      padding-top: 5px;
+  
+    }
+  }
+}
+
+.text{
+  &__inner{
+    margin-left: 770px;
+    font-size: 32px;
+  }
+  a{
+    color: black;
+  }
+}

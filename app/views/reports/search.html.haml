@@ -1,0 +1,9 @@
+= render 'layouts/header'
+
+.search-box
+  = form_with(url: reports_searches_path, local: true, method: :get, class: "search-box__box") do |f|
+    = f.text_field :keyword, placeholder: "Search", class: "search-box__box__text"
+    = image_submit_tag 'icons8-ios-50.png',height: '51px',width: '51px',class: "search-box__box__btn"
+
+.text 
+  = link_to "Back", root_path,class:"text__inner"
