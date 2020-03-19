@@ -1,16 +1,29 @@
 .main
-  .main__search
-  = link_to search_reports_path do
-    = image_tag 'icons8-ios-50.png'
-  %br  
+ .main__side
+  .main__side__content
+   %button#hamburgerbtn
+    %span
+    %span
+    %span
+   
 
-  .main__nav
-    .main__nav__gray
+  .main__side__nav
+   #graylayer
     %ul#slidemenu
-      %li
+     %li
       =link_to "投稿", new_report_path
-      %li
+     %li
       =link_to "投稿一覧表示", reports_path
+
+      %button#hanburgerbtn1
+      
+      %br
+
+  .main__side__search
+  = link_to search_reports_path do
+   = image_tag 'icons8-ios-50.png',height: '30px',width:'30px',class:'main__side__search__logo'
+    
+  
 
   %h2 BOOK-WORM
 
