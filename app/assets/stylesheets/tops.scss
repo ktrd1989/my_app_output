@@ -43,8 +43,11 @@
 .main{
   background: #ebeae9;
   height: 100vh;
+  display: flex;
   &__side{
-    
+    border-right: solid 1px;
+    outline: solid 1px;
+	  outline-offset: 8px;
     &__content{
       #hamburgerbtn {
         background-color: #ebeae9;
@@ -136,7 +139,19 @@
     font-size: 30px;
     padding: 230px 0 80px;
   }
-  
+ }
+ &__right{
+   &__top{
+     display: flex;
+    &__box{
+
+    }
+    &__picture{
+      margin-left: 400px;
+      margin-top: 50px;
+    }
+
+   }
  }
 }
   
