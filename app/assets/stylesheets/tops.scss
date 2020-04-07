@@ -143,15 +143,40 @@
  &__right{
    &__top{
      display: flex;
+     margin-top: 30px;
     &__box{
+      height: 500px;
+      width: 650px;
+      border-bottom: solid 2px;
+      
+      margin-left: 50px;
 
     }
     &__picture{
-      margin-left: 400px;
-      margin-top: 50px;
+      margin-left: 90px;
+      
     }
-
    }
+  &__bottom{
+    &__title{
+      margin-top: 30px;
+      margin-left: 200px;
+      font-size: 25px;
+     &__name{
+       color: black;
+       font-family: 'Liu Jian Mao Cao';
+
+     }
+    }
+    &__phrase{
+      font-size: 60px;
+      font-weight: 10px;
+      font-family: 'Liu Jian Mao Cao';
+      margin-top: 50px;
+      margin-left: 350px;
+
+    }
+  }
  }
 }
   
