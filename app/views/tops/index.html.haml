@@ -44,6 +44,17 @@
    .main__right__top__box
    = image_tag 'reading-1246520_1280.jpg',height: '500px',width:'800px',class:'main__right__top__picture'
 
+  .main__right__bottom
+   -@report.first(1).each do |report|
+    .main__right__bottom__title
+     = link_to "/reports/#{report.id}", method: :get do
+      .main__right__bottom__title__name
+       Today Recommend : 
+       = report.title
+    .main__right__bottom__phrase
+     "People don't realize how a man's
+     %br
+     whole life can be changed by one book"
 
 
     
