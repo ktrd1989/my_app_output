@@ -10,14 +10,26 @@
   .main__side__nav
    #graylayer
     %ul#slidemenu
-     %li
-      =link_to "投稿", new_report_path
-     %li
-      =link_to "投稿一覧表示", reports_path
+     %button#hamburgerbtn1
+      %span
+      %span
+      %span
+     %h3 menu 
 
-      %button#hanburgerbtn1
+     %li
+      =link_to "Post", new_report_path
+     %li
+      =link_to "Post All", reports_path
+
+     %h4 category
+
+     %li
+      =link_to "Book", root_path
+     %li
+      =link_to "Movie", root_path
+     %li
+      =link_to "WebSite", root_path
       
-      %br
 
   .main__side__search
   = link_to search_reports_path do
