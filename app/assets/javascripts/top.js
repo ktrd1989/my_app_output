@@ -12,10 +12,10 @@ $(function(){
 	});
 	
 	//背景をクリックしたときの処理
-	$('#hanburgerbtn1').click(function(){
+	$('#hamburgerbtn1').click(function(){
 		$('#glaylayer:not(:animated)').fadeOut('fast');
 		$('#slidemenu:not(:animated)').animate({
-			'left' : -1*$(this).width()
+			'left' : -5*$(this).width()
 		},'fast',function(){
 			$(this).css({
 				'display' : 'none'	
