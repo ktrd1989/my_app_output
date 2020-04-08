@@ -1,7 +1,9 @@
-.main{
+.main1{
+  background: #ebeae9;
+  height: 100vh;
   display: block;
   &__search-box{
-    margin-top: 400px;
+    padding-top: 400px;
     &__box{
       margin-left: 500px;
       display: flex;
@@ -22,8 +24,9 @@
 
   &__text{
     &__inner{
-      margin-left: 770px;
       font-size: 32px;
+      padding-left: 770px; 
+      
     }
     a{
       color: black;
