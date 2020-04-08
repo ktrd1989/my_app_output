@@ -1,9 +1,9 @@
-.main
+.main1
 
-  .main__search-box
-    = form_with(url: reports_searches_path, local: true, method: :get, class: "main__search-box__box") do |f|
-      = f.text_field :keyword, placeholder: "Search", class: "main__search-box__box__text"
-      = image_submit_tag 'icons8-ios-50.png',height: '51px',width: '51px',class: "main__search-box__box__btn"
+  .main1__search-box
+    = form_with(url: reports_searches_path, local: true, method: :get, class: "main1__search-box__box") do |f|
+      = f.text_field :keyword, placeholder: "Search", class: "main1__search-box__box__text"
+      = image_submit_tag 'icons8-ios-50.png',height: '51px',width: '51px',class: "main1__search-box__box__btn"
 
-  .main__text 
-    = link_to "Back", root_path,class:"main__text__inner"
+  .main1__text 
+    = link_to "Back", root_path,class:"main1__text__inner"
